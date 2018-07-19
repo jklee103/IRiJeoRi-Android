@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:background="@drawable/rounded_layout"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="후기 작성"
+        android:textColor="@color/defaultGray"
+        android:layout_gravity="center"
+        android:textSize="28dp"
+        android:textStyle="bold"/>
+
+    <RatingBar
+        android:id="@+id/review_write_ratingbar"
+        android:numStars="5"
+        android:rating="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/review_write_content"
+        android:layout_width="230dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_layout"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/review_write_complete"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="작성 완료"
+        android:textColor="@color/textWhite"
+        android:textSize="20dp"
+        android:background="@drawable/rounded_button"/>
+
+</LinearLayout>

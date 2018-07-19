@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_layout"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:layout_width="200dp"
+    android:layout_height="170dp">
+
+    <ImageView
+        android:id="@+id/townImage"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/townName"
+        android:text="마을이름"
+        android:textStyle="bold"
+        android:textColor="@color/textBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/townAddress"
+        android:text="마을 주소"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_layout"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="220dp">
+
+    <TextView
+        android:id="@+id/activityAge"
+        android:text="참가연령: 모든 연령층"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/activityName"
+        android:text="활동이름"
+        android:textColor="@color/textBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:id="@+id/activityImage"
+        android:layout_width="220dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/activityPeriod"
+        android:text="운영시기: 1월부터 2월까지"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/activityPeople"
+        android:text="참가가능인원: 20명"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"/>
+
+</LinearLayout>

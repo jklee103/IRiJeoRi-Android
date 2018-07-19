@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#1ABC9C</color>
+
+    <!-- 사용자 추가 컬러 -->
+    <color name="defaultGreen">#1ABC9C</color>
+    <color name="defaultGray">#8C8C8C</color>
+    <color name="textWhite">#FFFFFF</color>
+    <color name="textBlack">#000000</color>
+    <color name="accentYellow">#F1C40F</color>
+    <color name="accentPink">#F15F5F</color>
+    <color name="accentLightGray">#BDBDBD</color>
+    <color name="accentBlue">#6799FF</color>
+    <color name="accentGreen">#9FC93C</color>
+</resources>

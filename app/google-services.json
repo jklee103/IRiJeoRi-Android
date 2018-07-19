@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "822706711020",
+    "firebase_url": "https://parsertes.firebaseio.com",
+    "project_id": "parsertes",
+    "storage_bucket": "parsertes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822706711020:android:213cd6ca1fe546ed",
+        "android_client_info": {
+          "package_name": "com.threechon.a0.dataparser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822706711020-cpfmqf7kcuh60niukv7bco3sv0mq3ra9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArEfxHXh_-n1d1fCbaojRRa_OeBQ0otIU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822706711020:android:674394874ff4ff20",
+        "android_client_info": {
+          "package_name": "com.threechon.yeonwookang0702"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822706711020-cpfmqf7kcuh60niukv7bco3sv0mq3ra9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArEfxHXh_-n1d1fCbaojRRa_OeBQ0otIU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyTripActivity"
+    android:background="@color/textWhite">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/trip_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나의 여행 취향 한눈에 보기"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/nav_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accentLightGray"
+                    android:text="* '마이페이지'에서 취향 정보 설정과 충분한 리뷰를 남긴 후에 사용 가능합니다."
+                    android:layout_margin="5dp"
+                    android:textSize="10dp"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textWhite"
+                    android:text="내가 선호하는 체험 활동"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@drawable/rounded_button"/>
+
+                <ImageView
+                    android:id="@+id/cloudImg"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_height="200dp"/>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textWhite"
+                    android:text="내가 좋아하는 체험 활동이 있는 마을"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@drawable/rounded_button"/>
+
+                <LinearLayout
+                    android:id="@+id/recommended_list_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recommended_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"></LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <!-- 내비게이션 바 -->
+    <!-- 내비게이션 바 -->
+
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/defaultGreen"
+        android:gravity="bottom|center"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/mytrip_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/mytrip" />
+
+        <ImageButton
+            android:id="@+id/scrap_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/scrap" />
+
+        <ImageButton
+            android:id="@+id/main_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/main" />
+
+        <ImageButton
+            android:id="@+id/review_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/review" />
+
+        <ImageButton
+            android:id="@+id/mypage_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/mypage" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

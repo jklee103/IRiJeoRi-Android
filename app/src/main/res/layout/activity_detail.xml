@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical"
+    android:background="@color/textWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/detail_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <!-- 상단 이미지부터 버튼까지 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tonwImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="15dp"/>
+
+                    <!-- 버튼 레이아웃 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/townName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:textColor="@color/textBlack"
+                        android:text="샘플 마을 "/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="평균 평점"
+                            android:textColor="@color/accentLightGray"/>
+                        <!-- 리사이징 하려면 리소스 파일 자체 수정 -->
+                        <RatingBar
+                            android:id="@+id/ratingbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:stepSize="0.5"
+                            android:rating="3.5"
+                            android:isIndicator="true"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_gravity="center_vertical|right"/>
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:id="@+id/scrap_toggle_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:textOff=""
+                        android:textOn=""
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/scrap_toggle_btn1"
+                        android:stateListAnimator="@null"
+                        android:layout_marginRight="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/review_write_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/review_write_btn"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 마을 소개 -->
+                    <TextView
+                        android:id="@+id/detailIntro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sample town content.
+town introduction would be here.
+sample town content.
+town introduction would be here.
+sample town content.
+town introduction would be here.
+sample town content.
+town introduction would be here."/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textWhite"
+                        android:text="체험 정보"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rounded_button"/>
+
+                    <!-- 체험 상품 리사이클러 뷰 -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/detail_activity_list"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textWhite"
+                        android:text="위치 정보"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rounded_button"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/detailAddressMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="주소: 샘플시 샘플군 샘플리"/>
+
+                        <Button
+                            android:id="@+id/navermap_btn"
+                            android:layout_width="80dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="네이버지도"
+                            android:background="@drawable/rounded_button"
+                            android:textColor="@color/textWhite"
+
+                            android:padding="0dp"/>
+
+                    </LinearLayout>
+
+                    <!-- 지도 자리 -->
+                    <com.nhn.android.maps.NMapView
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp">
+
+                    </com.nhn.android.maps.NMapView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textWhite"
+                        android:text="방문 후기"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rounded_button"/>
+
+                    <!-- 방문 후기 리사이클러 뷰 -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/detail_review_list"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textWhite"
+                        android:text="마을 정보"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rounded_button"/>
+
+                    <TextView
+                        android:id="@+id/detailAddress"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="주소: 샘플시 샘플군 샘플리 11"/>
+
+                    <TextView
+                        android:id="@+id/detailManager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="담당자: 홍길동"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/callBtn"
+                            android:layout_margin="5dp"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/textWhite"
+                            android:background="@drawable/rounded_button_yellow"
+                            android:text="전화문의"/>
+
+                        <Button
+                            android:id="@+id/homepageBtn"
+                            android:layout_margin="5dp"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/textWhite"
+                            android:background="@drawable/rounded_button"
+                            android:text="홈페이지"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--http://www.welchon.com/web/index.do-->
+                    <Button
+                        android:id="@+id/welchonBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="웰촌에서 자세히 보기"
+                        android:textSize="20dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/textWhite"
+                        android:background="@drawable/rounded_button_yellow"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- 내비게이션 바 -->
+    <!-- 내비게이션 바 -->
+
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/defaultGreen"
+        android:gravity="bottom|center"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/mytrip_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/mytrip" />
+
+        <ImageButton
+            android:id="@+id/scrap_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/scrap" />
+
+        <ImageButton
+            android:id="@+id/main_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/main" />
+
+        <ImageButton
+            android:id="@+id/review_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/review" />
+
+        <ImageButton
+            android:id="@+id/mypage_btn"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/defaultGreen"
+            android:padding="0dp"
+            android:src="@drawable/mypage" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
