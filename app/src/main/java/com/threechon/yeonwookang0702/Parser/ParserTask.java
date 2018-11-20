@@ -21,8 +21,8 @@ import java.util.ArrayList;
 public class ParserTask extends AsyncTask {
     public final static String TAG="main";
     public final static String ROAD_URL = "http://openapi.ekr.or.kr/openapi/service/rest/FrhlExprnVilageService/";
-    public final static String KEY = "%2BQ4swNs0IVskkLfBYFqS78TTem%2FJuBAqhU%2FkI7zkd8wd0boX%2BAgu6r%2BBkha1O6wwrcyMfiyC0Riyzb%2Bb%2FerjLw%3D%3D";
-    public final static String KEY2 = "Eb5fhpPHVSZ7AoYJMGkkYZedQNIBiVl%2FnWTI8jF94Rb2ioM4kO513S7zP5lv4Q8yTuX7Ad6CceOalJ5dFvK85w%3D%3D";
+    public final static String KEY = "---------------";
+    public final static String KEY2 = "------------------";
     public String vilcode=null;//마을 코드
     private String searchmode;//검색모드
     public String newurl;
