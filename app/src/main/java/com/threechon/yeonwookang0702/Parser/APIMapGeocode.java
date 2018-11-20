@@ -27,8 +27,8 @@ public class APIMapGeocode extends AsyncTask{
     String[] points;
     @Override
     protected Object doInBackground(Object[] objects) {
-        String clientId = "pQeAzduTykoH7ucFsmxr";//애플리케이션 클라이언트 아이디값";
-        String clientSecret = "fgkQC7lkr9";//애플리케이션 클라이언트 시크릿값";
+        String clientId = "---------------";//애플리케이션 클라이언트 아이디값";
+        String clientSecret = "-----------------";//애플리케이션 클라이언트 시크릿값";
 
         ArrayList<String> arr1=new ArrayList<>();
         ArrayList<String> arr2=new ArrayList<>();
